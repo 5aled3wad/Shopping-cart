@@ -1,0 +1,25 @@
+<%- include('../partials/header') %> <%- include('../partials/navbar') %> 
+<div class="col-md-4 offset-md-4" style="padding-top: 30px;">
+    <h5 class="text-center">SignUp</h5>
+<form action="signup" method="post">
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" name="email" placeholder="Enter Your Email" class="form-control">
+    </div>
+    <br>
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" name="password" placeholder="Enter Your Password" class="form-control">
+    </div>
+    <br>
+    <div class="form-group">
+        <label for="confirm-password">Confirm-Password</label>
+        <input type="password" name="confirm-password" placeholder="Re Enter Your Password" class="form-control">
+    </div>
+    <br>
+    <button type="submit" class="btn btn-primary">SignUp</button>
+</form>
+</div>
+
+
+<%- include('../partials/footer') %>
