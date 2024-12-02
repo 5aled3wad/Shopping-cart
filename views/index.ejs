@@ -1,6 +1,35 @@
-<%- include('./partials/header') %> <%- include('./partials/navbar') %>
+<%- include('./partials/header') %> <%- include('./partials/navbar') %> 
+<% for(let i = 0; i < products.length; i++ ) { %>
+<div class="row">
+  <% products[i].forEach(element => { %>
+  <div class="col-sm-4">
+    <div class="card" style="width: 18rem">
+      <div class="text-center">
+        <img src="<%= element.imagePath %>" class="card-img-top" alt="..." />
+      </div>
+      <div class="card-body">
+        <h5 class="card-title"><%= element.productName %></h5>
+        <p class="card-text">
+          SIM Card:<%=element.productInformation.simCard %><br />
+          Screen:<%=element.productInformation.screen %><br />
+          RAM:
+          <%=element.productInformation.ram %><br />
+          Internal Memory:<%=element.productInformation.internalMemory %><br />
+          Rear Camera: Triple:<%=element.productInformation.camera %><br />
+          Color:
+          <%=element.productInformation.color %>
+        </p>
+        <div>
+          <div class="price" style="float: left">EGP <%=element.price %></div>
+          <a href="#" class="btn btn-success" style="float: right"
+            >Add To Cart</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
 
-<h1><%= title %></h1>
-<p>Welcome To <%= title %></p>
-
+  <% }) %>
+</div>
+<% } %> 
 <%- include('./partials/footer') %>
