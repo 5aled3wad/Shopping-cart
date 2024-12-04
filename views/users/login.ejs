@@ -1,6 +1,12 @@
 <%- include('../partials/header') %> <%- include('../partials/navbar') %> 
 <div class="col-md-4 offset-md-4" style="padding-top: 30px;">
-    <h5 class="text-center">Login</h5>
+    <h5 class="display-6">Login</h5>
+    <hr>
+    <% if (errorMessage) { %>
+        <div class="user-message user-message--error">
+            <%= errorMessage %>
+        </div>
+    <% } %>
 <form action="login" method="post">
     <div class="form-group">
         <label for="email">Email</label>
